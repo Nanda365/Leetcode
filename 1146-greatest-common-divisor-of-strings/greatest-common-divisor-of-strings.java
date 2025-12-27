@@ -1,19 +1,20 @@
 class Solution {
     public String gcdOfStrings(String str1, String str2) {
-
-        if(!(str1+str2).equals(str2+str1)) {
+        if((str1+str2).equals(str2+str1)){
+            int a=str1.length();
+            int b=str2.length();
+            int gcd=gcd(a,b);
+            return str1.substring(0,gcd);
+        }else{
             return "";
         }
-
-        int len1 = str1.length();
-        int len2 = str2.length();
-
-        String ans = str1.substring(0, gcd(len1, len2));
-
-        return ans;
     }
-
-    public int gcd(int len1, int len2) {
-        return (len2 == 0) ? len1 : gcd(len2, len1 % len2);
+    int gcd(int a,int b){
+        while(b!=0){
+            int rem=a%b;
+            a=b;
+            b=rem;
+        }
+        return a;
     }
-} 
+}
