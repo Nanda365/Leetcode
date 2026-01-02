@@ -3,8 +3,8 @@ class Solution {
         int alt=0;
         int max=0;
 
-        for(int val:gain){
-            alt+=val;
+        for(int i=0;i<gain.length;i++){
+            alt+=gain[i];
             max=Math.max(alt,max);
         }
         return max;
