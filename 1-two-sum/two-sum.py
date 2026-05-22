@@ -1,7 +1,7 @@
 class Solution(object):
     def twoSum(self, nums, target):
         for i in range(len(nums)):
-            num1=nums[i+1:]
-            if (target-nums[i]) in num1:
-                return [i,(num1.index(target-nums[i]))+i+1]
+            for j in range(i+1,len(nums)):
+                if(nums[i]+nums[j]==target):
+                    return [i,j]
         
