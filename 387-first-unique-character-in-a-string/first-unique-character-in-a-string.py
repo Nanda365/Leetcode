@@ -8,7 +8,6 @@ class Solution:
             else:
                 dic[ch]=1
         
-        index = 0
         newch = ""
         for key in dic:
             if(dic[key]==1):
