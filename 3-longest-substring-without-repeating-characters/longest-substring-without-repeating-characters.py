@@ -10,7 +10,6 @@ class Solution:
 
             map[s[right]] = right
 
-            if((right-left+1)>maxlength):
-                maxlength = right-left+1
+            maxlength = max(maxlength,right-left+1)
 
         return maxlength
