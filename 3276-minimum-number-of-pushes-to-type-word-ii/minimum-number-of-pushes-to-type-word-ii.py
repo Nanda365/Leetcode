@@ -7,17 +7,14 @@ class Solution:
                 obj[ch]+=1
             else:
                 obj[ch]=1
-
-        keys = ""
         values = []
         
         for key in obj:
-            keys+=key
             values.append(obj[key])
         values.sort(reverse=True)
 
         ans = 0
-        for i in range(len(keys)):
+        for i in range(len(values)):
             ans+=(i//8+1)*values[i]
         
         return ans
