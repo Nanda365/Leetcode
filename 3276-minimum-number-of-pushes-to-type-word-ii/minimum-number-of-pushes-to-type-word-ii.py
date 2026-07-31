@@ -16,14 +16,8 @@ class Solution:
             values.append(obj[key])
         values.sort(reverse=True)
 
-        res = 0
-        arr=[]
-        for i in range(len(keys)):
-            res=i//8+1
-            arr.append(res)
-
         ans = 0
         for i in range(len(keys)):
-            ans+=arr[i]*values[i]
+            ans+=(i//8+1)*values[i]
         
         return ans
