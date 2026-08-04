@@ -10,7 +10,7 @@ class Solution:
             if(num>max_val):
                 max_val = num
 
-        for val in range(min_val+1,max_val):
+        for val in range(min_val,max_val):
             if val not in nums:
                 res.append(val)
         
